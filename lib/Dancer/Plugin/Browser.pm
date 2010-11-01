@@ -10,9 +10,11 @@ use HTTP::BrowserDetect;
 
 Dancer::Plugin::Browser - easy to have info of the browser.
 
+=encoding utf8
+
 =cut
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 register browser_detect => sub {
     my $useragent = request->env->{HTTP_USER_AGENT};
@@ -30,7 +32,7 @@ register_plugin;
     get '/' => sub {
         my $browser = browser_detect();
 
-        if ( browser->windows && browser->ie && browser->major() < 6 ) {
+        if ( $browser->windows && $browser->ie && $browser->major() < 6 ) {
             return "You have big failed, change your os, browser, and come back late.";
         }
     };

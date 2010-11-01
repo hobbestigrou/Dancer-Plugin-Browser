@@ -1,4 +1,7 @@
 Revision history for Dancer-Plugin-Browser
 
+0.2 01/11/2010
+    Fixe typo, and encoding in a pod.
+
 0.1 19/10/2010
     Initial version developed.
