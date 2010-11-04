@@ -1,4 +1,4 @@
-package Dancer::Plugin::Browser;
+package Dancer::Plugin::Browser::Detect;
 
 use strict;
 use warnings;
@@ -8,11 +8,13 @@ use HTTP::BrowserDetect;
 
 =head1 NAME
 
-Dancer::Plugin::Browser - easy to have info of the browser.
+Dancer::Plugin::Browser::Detect - easy to have info of the browser.
+
+=encoding utf8
 
 =cut
 
-our $VERSION = '0.1';
+our $VERSION = '0.3';
 
 register browser_detect => sub {
     my $useragent = request->env->{HTTP_USER_AGENT};
@@ -25,12 +27,12 @@ register_plugin;
 =head1 SYNOPSIS
 
     use Dancer;
-    use Dancer::Plugin::Browser;
+    use Dancer::Plugin::Browser::Detect;
 
     get '/' => sub {
         my $browser = browser_detect();
 
-        if ( browser->windows && browser->ie && browser->major() < 6 ) {
+        if ( $browser->windows && $browser->ie && $browser->major() < 6 ) {
             return "You have big failed, change your os, browser, and come back late.";
         }
     };
