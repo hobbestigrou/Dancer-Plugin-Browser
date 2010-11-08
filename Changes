@@ -1,5 +1,8 @@
 Revision history for Dancer-Plugin-Browser
 
+0.4  08/11/2010
+     Add Browser.pm
+
 0.3 04/11/2010
     Rename.
 
