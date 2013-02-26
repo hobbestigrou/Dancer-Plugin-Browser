@@ -21,13 +21,11 @@ To have info of the browser
 
 =cut
 
-add_hook(
-    before_template => sub {
-        my $tokens = shift;
+hook before_template => sub {
+    my $tokens = shift;
 
-        $tokens->{browser_detect} = _browser_detect();
-    }
-);
+    $tokens->{browser_detect} = _browser_detect();
+};
 
 register browser_detect => sub {
     _browser_detect();
@@ -40,8 +38,7 @@ sub _browser_detect {
     return $browser;
 }
 
-register_plugin;
-
+register_plugin for_versions => [1, 2];
 
 =encoding utf8
 
