@@ -8,9 +8,21 @@ use HTTP::BrowserDetect;
 
 #ABSTRACT: Provides an easy to have info of the browser.
 
+=method browser_detect
+
+    browser_detect()
+
+To have info of the browser
+
+    input: none
+    output: A HTTP::BrowserDetect object
+
+=cut
+
 register browser_detect => sub {
     my $useragent = request->env->{HTTP_USER_AGENT};
     my $browser   = HTTP::BrowserDetect->new($useragent);
+
     return $browser;
 };
 
