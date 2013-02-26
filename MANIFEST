@@ -1,8 +1,0 @@
-Changes
-MANIFEST
-Makefile.PL
-README
-lib/Dancer/Plugin/Browser.pm
-lib/Dancer/Plugin/Browser/Detect.pm 
-t/00-load.t
-TODO
