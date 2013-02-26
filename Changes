@@ -1,5 +1,13 @@
 Revision history for Dancer-Plugin-Browser
 
+{{$NEXT}}
+
+1.130570  2013-02-26 15:27:58 Europe/Paris
+
+    * Migrate to dzil
+    * Add new basic testing
+    * Compliant Dancer and Dancer2
+
 0.4  08/11/2010
      Add Browser.pm
 
