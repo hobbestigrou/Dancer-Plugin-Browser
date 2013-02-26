@@ -11,6 +11,8 @@ use HTTP::BrowserDetect;
 =method browser_detect
 
     browser_detect()
+or
+    <% browser_detect %>
 
 To have info of the browser
 
@@ -19,12 +21,24 @@ To have info of the browser
 
 =cut
 
+add_hook(
+    before_template => sub {
+        my $tokens = shift;
+
+        $tokens->{browser_detect} = _browser_detect();
+    }
+);
+
 register browser_detect => sub {
+    _browser_detect();
+};
+
+sub _browser_detect {
     my $useragent = request->env->{HTTP_USER_AGENT};
     my $browser   = HTTP::BrowserDetect->new($useragent);
 
     return $browser;
-};
+}
 
 register_plugin;
 
