@@ -38,7 +38,7 @@ sub _browser_detect {
     return $browser;
 }
 
-register_plugin for_versions => [1, 2];
+register_plugin for_versions => [1];
 
 =encoding utf8
 
