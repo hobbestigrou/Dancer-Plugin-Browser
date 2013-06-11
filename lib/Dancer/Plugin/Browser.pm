@@ -31,6 +31,8 @@ You can find documentation for this module with the perldoc command.
 
 L<Dancer>
 L<HTTP::BrowserDetect>
+L<Catalyst::TraitFor::Request::BrowserDetect>
+L<Mojolicious::Plugin::BrowserDetect>
 
 =cut
 

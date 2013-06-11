@@ -67,6 +67,8 @@ keyword within your L<Dancer> application.
 
 L<Dancer>
 L<HTTP::BrowserDetect>
+L<Catalyst::TraitFor::Request::BrowserDetect>
+L<Mojolicious::Plugin::BrowserDetect>
 
 =cut
 
